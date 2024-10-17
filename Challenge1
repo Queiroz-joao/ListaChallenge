@@ -1,0 +1,14 @@
+def mesclar_dicionarios(dicionario1, dicionario2):
+    resultado = dicionario1.copy()  
+    for chave, valor in dicionario2.items():
+        if chave in resultado:
+            resultado[chave] += valor  
+        else:
+            resultado[chave] = valor  
+    return resultado
+
+dicionario1 = {"a": 10, "b": 20, "c": 30}
+dicionario2 = {"b": 5, "c": 15, "d": 40}
+
+dicionario_mesclado = mesclar_dicionarios(dicionario1, dicionario2)
+print(dicionario_mesclado)
