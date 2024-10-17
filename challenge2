@@ -1,0 +1,19 @@
+def maior_valor(dicionario):
+    chave_maior = None
+    valor_maior = float('-inf')
+
+    for chave, subdicionario in dicionario.items():
+        if subdicionario['valor'] > valor_maior:
+            valor_maior = subdicionario['valor']
+            chave_maior = chave
+    
+    return chave_maior, valor_maior
+
+dicionario = {
+    "item1": {"nome": "A", "valor": 100},
+    "item2": {"nome": "B", "valor": 250},
+    "item3": {"nome": "C", "valor": 75},
+}
+
+chave, valor = maior_valor(dicionario)
+print(chave, valor)
